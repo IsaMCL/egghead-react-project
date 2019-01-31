@@ -1,23 +1,24 @@
-import React from 'react';
-import { hot } from 'react-hot-loader';
+import React from 'react'
+import { hot } from 'react-hot-loader'
 
-const Warning = React.lazy(() => import('./Warning'));
+const Warning = React.lazy(() => import('./Warning'))
+const a = "A";
 
 class App extends React.Component {
   state = {
     count: 0
-  };
+  }
 
   _increment = () => {
-    this.setState(state => ({ count: state.count + 1 }));
-  };
+    this.setState(state => ({ count: state.count + 1 }))
+  }
 
   _decrement = () => {
-    this.setState(state => ({ count: state.count - 1 }));
-  };
+    this.setState(state => ({ count: state.count - 1 }))
+  }
 
   render() {
-    const { count } = this.state;
+    const { count } = this.state
     return (
       <div>
         <h1>Hello World!!</h1>
@@ -30,8 +31,8 @@ class App extends React.Component {
           </React.Suspense>
         ) : null}
       </div>
-    );
+    )
   }
 }
 
-export default hot(module)(App);
+export default hot(module)(App)
